@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yousuf Rayhan Emon - Portfolio</title>
+    <title>Yousuf Rayhan Emon - AI/ML Researcher Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         * {
@@ -82,46 +82,180 @@
         }
 
         /* Homepage Styles */
-        .home-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 4rem;
+        .home-hero {
+            text-align: center;
+            margin-bottom: 4rem;
         }
 
-        .home-card {
-            background: rgba(45, 45, 45, 0.8);
+        .home-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(45deg, #ffd700, #ffed4e);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .home-hero p {
+            font-size: 1.2rem;
+            color: #cccccc;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* First Row - Main Cards */
+        .home-main-row {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .main-card {
+            background: rgba(45, 45, 45, 0.9);
             border-radius: 15px;
             padding: 2rem;
             text-align: center;
             transition: transform 0.3s, box-shadow 0.3s;
             border: 2px solid transparent;
+            height: 350px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
 
-        .home-card:hover {
+        .main-card:hover {
             transform: translateY(-10px);
             box-shadow: 0 20px 40px rgba(255, 215, 0, 0.3);
             border-color: #ffd700;
         }
 
-        .home-card img {
-            width: 150px;
-            height: 150px;
+        /* Profile Card */
+        .profile-card img {
+            width: 120px;
+            height: 120px;
             border-radius: 50%;
             object-fit: cover;
             margin-bottom: 1rem;
             border: 3px solid #ffd700;
         }
 
-        .home-card h3 {
+        .profile-card h3 {
             color: #ffd700;
-            margin-bottom: 1rem;
-            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            font-size: 1.4rem;
         }
 
-        .home-card p {
+        .keywords {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.5rem;
+            margin: 1rem 0;
+        }
+
+        .keyword-tag {
+            background: rgba(255, 215, 0, 0.2);
+            color: #ffd700;
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            border: 1px solid rgba(255, 215, 0, 0.3);
+        }
+
+        /* Latest Updates Card */
+        .updates-card h3 {
+            color: #ffd700;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .update-item {
+            background: rgba(26, 26, 26, 0.6);
+            border-radius: 8px;
+            padding: 0.8rem;
+            margin-bottom: 0.8rem;
+            border-left: 3px solid #4dabf7;
+            text-align: left;
+        }
+
+        .update-item h4 {
+            font-size: 0.9rem;
+            color: #ffffff;
+            margin-bottom: 0.3rem;
+        }
+
+        .update-item span {
+            font-size: 0.7rem;
+            color: #ffd700;
+        }
+
+        /* Research Stats Card */
+        .stats-card h3 {
+            color: #ffd700;
             margin-bottom: 1.5rem;
+            font-size: 1.2rem;
+        }
+
+        .stat-item {
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #4dabf7;
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
             color: #cccccc;
+        }
+
+        /* Second Row - Navigation Cards */
+        .home-nav-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .nav-card {
+            background: rgba(45, 45, 45, 0.8);
+            border-radius: 12px;
+            padding: 1.5rem;
+            text-align: center;
+            transition: all 0.3s;
+            cursor: pointer;
+            border: 2px solid transparent;
+            height: 180px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .nav-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(255, 215, 0, 0.2);
+            border-color: #ffd700;
+        }
+
+        .nav-card i {
+            font-size: 2.5rem;
+            color: #ffd700;
+            margin-bottom: 1rem;
+        }
+
+        .nav-card h3 {
+            color: #ffffff;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .nav-card p {
+            color: #cccccc;
+            font-size: 0.9rem;
         }
 
         .btn {
@@ -135,6 +269,7 @@
             transition: all 0.3s;
             border: none;
             cursor: pointer;
+            margin-top: 1rem;
         }
 
         .btn:hover {
@@ -143,9 +278,33 @@
         }
 
         /* About Section */
-        .about-grid {
+        .about-container {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: 1fr 2fr;
+            gap: 3rem;
+            align-items: start;
+        }
+
+        .about-image-section {
+            background: rgba(45, 45, 45, 0.8);
+            border-radius: 15px;
+            padding: 2rem;
+            text-align: center;
+            position: sticky;
+            top: 100px;
+        }
+
+        .about-image-section img {
+            width: 200px;
+            height: 200px;
+            border-radius: 15px;
+            object-fit: cover;
+            margin-bottom: 1.5rem;
+            border: 3px solid #ffd700;
+        }
+
+        .about-content {
+            display: grid;
             gap: 2rem;
         }
 
@@ -363,13 +522,30 @@
                 font-size: 2rem;
             }
 
+            .home-hero h1 {
+                font-size: 2rem;
+            }
+
+            .home-main-row {
+                grid-template-columns: 1fr;
+            }
+
+            .main-card {
+                height: auto;
+            }
+
             .contact-grid {
                 grid-template-columns: 1fr;
                 gap: 2rem;
             }
 
-            .home-grid {
+            .about-container {
                 grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .about-image-section {
+                position: static;
             }
         }
 
@@ -397,38 +573,91 @@
     <!-- Home Section -->
     <section id="home" class="section">
         <div class="container">
-            <h1 class="section-title">Welcome to My Portfolio</h1>
-            <div class="home-grid">
-                <!-- About Me Card -->
-                <div class="home-card">
-                    <img src="images/profile.jpg" alt="Your Photo">
-                    <h3>About Me</h3>
-                    <p>Brief introduction about yourself, your expertise, and what you're passionate about in your field.</p>
+            <div class="home-hero">
+                <h1>Welcome to My Portfolio</h1>
+                <p>AI/ML Researcher | Teacher | Python Programmer - Advancing healthcare and agriculture through explainable AI and deep learning innovations</p>
+            </div>
+
+            <!-- First Row - Main Cards -->
+            <div class="home-main-row">
+                <!-- Profile Card -->
+                <div class="main-card profile-card">
+                    <div>
+                        <img src="images/profile.jpg" alt="Yousuf Rayhan Emon">
+                        <h3>Yousuf Rayhan Emon</h3>
+                        <div class="keywords">
+                            <span class="keyword-tag">AI Researcher</span>
+                            <span class="keyword-tag">Deep Learning</span>
+                            <span class="keyword-tag">Computer Vision</span>
+                            <span class="keyword-tag">XAI</span>
+                        </div>
+                    </div>
                     <button class="btn" onclick="showSection('about')">Learn More</button>
                 </div>
 
-                <!-- Projects Card -->
-                <div class="home-card">
-                    <i class="fas fa-code" style="font-size: 3rem; color: #ffd700; margin-bottom: 1rem;"></i>
-                    <h3>My Projects</h3>
-                    <p>Explore my latest projects and applications that showcase my technical skills and creativity.</p>
-                    <button class="btn" onclick="showSection('projects')">View Projects</button>
+                <!-- Latest Updates -->
+                <div class="main-card updates-card">
+                    <h3><i class="fas fa-newspaper"></i> Latest Updates</h3>
+                    <div>
+                        <div class="update-item">
+                            <h4>Q1 Journal Publication</h4>
+                            <span>Dec 2024 - Citescore 17</span>
+                        </div>
+                        <div class="update-item">
+                            <h4>Research Award from DIU</h4>
+                            <span>Nov 2024</span>
+                        </div>
+                        <div class="update-item">
+                            <h4>Feature Fusion for Medical AI</h4>
+                            <span>Oct 2024</span>
+                        </div>
+                    </div>
                 </div>
 
-                <!-- Research Card -->
-                <div class="home-card">
-                    <i class="fas fa-graduation-cap" style="font-size: 3rem; color: #ffd700; margin-bottom: 1rem;"></i>
-                    <h3>Research Work</h3>
-                    <p>Discover my published papers, ongoing research, and contributions to the academic community.</p>
-                    <button class="btn" onclick="showSection('research')">Explore Research</button>
+                <!-- Research Stats -->
+                <div class="main-card stats-card">
+                    <h3><i class="fas fa-chart-line"></i> Research Impact</h3>
+                    <div>
+                        <div class="stat-item">
+                            <span class="stat-number">2.5</span>
+                            <span class="stat-label">Years Experience</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">14</span>
+                            <span class="stat-label">Publications</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">102</span>
+                            <span class="stat-label">Citations</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Second Row - Navigation Cards -->
+            <div class="home-nav-row">
+                <div class="nav-card" onclick="showSection('projects')">
+                    <i class="fas fa-code"></i>
+                    <h3>Projects</h3>
+                    <p>Explore my latest work</p>
                 </div>
 
-                <!-- Contact Card -->
-                <div class="home-card">
-                    <i class="fas fa-envelope" style="font-size: 3rem; color: #ffd700; margin-bottom: 1rem;"></i>
-                    <h3>Get In Touch</h3>
-                    <p>Let's collaborate! Reach out to me for opportunities, projects, or just to connect.</p>
-                    <button class="btn" onclick="showSection('contact')">Contact Me</button>
+                <div class="nav-card" onclick="showSection('research')">
+                    <i class="fas fa-graduation-cap"></i>
+                    <h3>Research</h3>
+                    <p>Publications & papers</p>
+                </div>
+
+                <div class="nav-card" onclick="showSection('contact')">
+                    <i class="fas fa-envelope"></i>
+                    <h3>Contact</h3>
+                    <p>Let's collaborate</p>
+                </div>
+
+                <div class="nav-card" onclick="window.open('documents/CV_Yousuf_Rayhan_Emon.pdf', '_blank')">
+                    <i class="fas fa-file-pdf"></i>
+                    <h3>Download CV</h3>
+                    <p>View full resume</p>
                 </div>
             </div>
         </div>
@@ -438,42 +667,57 @@
     <section id="about" class="section hidden">
         <div class="container">
             <h2 class="section-title">About Me</h2>
-            <div class="about-grid">
-                <!-- Bio Card -->
-                <div class="about-card">
-                    <h3><i class="fas fa-user"></i> Biography</h3>
-                    <p>Write your detailed biography here. Include your background, interests, career journey, and what drives you in your field. This is where you can tell your story and connect with visitors on a personal level.</p>
+            <div class="about-container">
+                <!-- Left Side - Image and Brief Info -->
+                <div class="about-image-section">
+                    <img src="images/about-photo.jpg" alt="Yousuf Rayhan Emon">
+                    <h3 style="color: #ffd700; margin-bottom: 1rem;">Yousuf Rayhan Emon</h3>
+                    <p style="color: #cccccc; margin-bottom: 1rem;">AI/ML Researcher | MSc Data Science | Graduate Research Assistant</p>
+                    <div class="keywords">
+                        <span class="keyword-tag">Research</span>
+                        <span class="keyword-tag">AI/ML</span>
+                        <span class="keyword-tag">XAI</span>
+                    </div>
                 </div>
 
-                <!-- Education Card -->
-                <div class="about-card">
-                    <h3><i class="fas fa-graduation-cap"></i> Education</h3>
-                    <ul>
-                        <li><strong>Ph.D. in [Your Field]</strong> - University Name (Year)</li>
-                        <li><strong>Master's in [Your Field]</strong> - University Name (Year)</li>
-                        <li><strong>Bachelor's in [Your Field]</strong> - University Name (Year)</li>
-                    </ul>
-                </div>
+                <!-- Right Side - Detailed Information -->
+                <div class="about-content">
+                    <!-- Bio Card -->
+                    <div class="about-card">
+                        <h3><i class="fas fa-user"></i> Biography</h3>
+                        <p>I am currently pursuing an MSc in Data Science and working as a researcher focused on image-based AI and machine learning. My main research areas include developing lightweight deep learning models for medical imaging and agricultural analysis, using techniques like feature fusion, attention mechanisms, and domain-aware learning. I am also involved in educational data research, especially using structured (CSV/tabular) data to build predictive systems. In all sectors I work in, I apply Explainable AI (XAI) methods to improve transparency and trust in model outcomes. My work has been published in international journals and conferences, and I actively contribute to open-source datasets and real-world AI projects.</p>
+                    </div>
 
-                <!-- Experience Card -->
-                <div class="about-card">
-                    <h3><i class="fas fa-briefcase"></i> Experience</h3>
-                    <ul>
-                        <li><strong>Current Position</strong> - Company Name (Year - Present)</li>
-                        <li><strong>Previous Position</strong> - Company Name (Year - Year)</li>
-                        <li><strong>Another Position</strong> - Company Name (Year - Year)</li>
-                    </ul>
-                </div>
+                    <!-- Education Card -->
+                    <div class="about-card">
+                        <h3><i class="fas fa-graduation-cap"></i> Education</h3>
+                        <ul>
+                            <li><strong>MSc in Computer Science & Engineering (Data Science)</strong> - Daffodil International University (2024-Cont.) - CGPA: 3.94/4.00</li>
+                            <li><strong>Bachelor's in Computer Science & Engineering</strong> - Daffodil International University (2020-2023) - CGPA: 3.87/4.00</li>
+                            <li><strong>Higher Secondary Certificate (Science)</strong> - Bangladesh Noubahini School and College, Khulna (2016-2017) - GPA: 4.75/5.00</li>
+                        </ul>
+                    </div>
 
-                <!-- Skills Card -->
-                <div class="about-card">
-                    <h3><i class="fas fa-cogs"></i> Skills & Expertise</h3>
-                    <ul>
-                        <li>Programming Languages: Python, JavaScript, etc.</li>
-                        <li>Frameworks & Tools: React, Node.js, etc.</li>
-                        <li>Research Areas: AI, Machine Learning, etc.</li>
-                        <li>Other Skills: Data Analysis, etc.</li>
-                    </ul>
+                    <!-- Experience Card -->
+                    <div class="about-card">
+                        <h3><i class="fas fa-briefcase"></i> Experience</h3>
+                        <ul>
+                            <li><strong>Graduate Research Assistant</strong> - 4IR Research Cell, Daffodil International University (2024 - Present)</li>
+                            <li><strong>Teaching Assistant</strong> - Department of CSE, Daffodil International University (2023 - 2024)</li>
+                            <li><strong>Instructor (Blockchain Development)</strong> - Cyber Security Club, DIU (2023)</li>
+                        </ul>
+                    </div>
+
+                    <!-- Skills Card -->
+                    <div class="about-card">
+                        <h3><i class="fas fa-cogs"></i> Research & Technical Interests</h3>
+                        <ul>
+                            <li><strong>Core Areas:</strong> Image-based AI, Lightweight Deep Learning, Medical Imaging, Agricultural Analysis</li>
+                            <li><strong>Techniques:</strong> Feature Fusion, Attention Mechanisms, Domain-aware Learning, Vision Transformers (ViT)</li>
+                            <li><strong>Specialized:</strong> Explainable AI (XAI), Hybrid CNN-ViT Models, Predictive Modeling</li>
+                            <li><strong>Applications:</strong> Healthcare AI, Smart Farming, Educational Data Analytics, Blockchain Development</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
@@ -487,15 +731,14 @@
                 <!-- Project 1 -->
                 <div class="project-card">
                     <div class="project-image">
-                        <i class="fas fa-laptop-code" style="font-size: 2rem;"></i>
+                        <i class="fas fa-user-shield" style="font-size: 2rem;"></i>
                     </div>
                     <div class="project-content">
-                        <h3 class="project-title">Project Title 1</h3>
-                        <p>Brief description of your project. Explain what it does, the technologies used, and its impact.</p>
+                        <h3 class="project-title">DeRefIdm: Decentralized Refugee Management</h3>
+                        <p>A blockchain-based system for refugee identification and management using smart contracts. Ensures secure, transparent, and decentralized identity verification.</p>
                         <div class="project-links">
-                            <a href="#" onclick="showProjectDetails('project1')"><i class="fas fa-info-circle"></i> Details</a>
-                            <a href="#" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-                            <a href="#" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                            <a href="#" onclick="alert('Project details coming soon!')"><i class="fas fa-info-circle"></i> Details</a>
+                            <a href="https://github.com/usufxrex" target="_blank"><i class="fab fa-github"></i> GitHub</a>
                         </div>
                     </div>
                 </div>
@@ -503,15 +746,14 @@
                 <!-- Project 2 -->
                 <div class="project-card">
                     <div class="project-image">
-                        <i class="fas fa-mobile-alt" style="font-size: 2rem;"></i>
+                        <i class="fas fa-graduation-cap" style="font-size: 2rem;"></i>
                     </div>
                     <div class="project-content">
-                        <h3 class="project-title">Project Title 2</h3>
-                        <p>Brief description of your second project. Highlight key features and technologies.</p>
+                        <h3 class="project-title">AI-Powered Student Dropout Prediction</h3>
+                        <p>Machine learning model with explainable AI insights for early detection of student dropout risks. Published in high-impact journal (Citescore 17).</p>
                         <div class="project-links">
-                            <a href="#" onclick="showProjectDetails('project2')"><i class="fas fa-info-circle"></i> Details</a>
-                            <a href="#" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-                            <a href="#" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                            <a href="#" onclick="alert('Project details coming soon!')"><i class="fas fa-info-circle"></i> Details</a>
+                            <a href="https://github.com/usufxrex" target="_blank"><i class="fab fa-github"></i> GitHub</a>
                         </div>
                     </div>
                 </div>
@@ -519,13 +761,29 @@
                 <!-- Project 3 -->
                 <div class="project-card">
                     <div class="project-image">
-                        <i class="fas fa-database" style="font-size: 2rem;"></i>
+                        <i class="fas fa-seedling" style="font-size: 2rem;"></i>
                     </div>
                     <div class="project-content">
-                        <h3 class="project-title">Project Title 3</h3>
-                        <p>Brief description of your third project. Coming soon - detailed information will be added.</p>
+                        <h3 class="project-title">Smart Agricultural Disease Detection</h3>
+                        <p>Vision Transformer models for accurate leaf disease detection in various crops including papaya, java plum, and sweet orange with custom datasets.</p>
                         <div class="project-links">
-                            <a href="#" onclick="alert('Coming Soon!')"><i class="fas fa-clock"></i> Coming Soon</a>
+                            <a href="#" onclick="alert('Project details coming soon!')"><i class="fas fa-info-circle"></i> Details</a>
+                            <a href="https://github.com/usufxrex" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-shield-alt" style="font-size: 2rem;"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Smart Contract Applications</h3>
+                        <p>Various blockchain projects including vaccine distribution, insurance management, and secure marriage records using smart contracts.</p>
+                        <div class="project-links">
+                            <a href="#" onclick="alert('Project details coming soon!')"><i class="fas fa-info-circle"></i> Details</a>
+                            <a href="https://github.com/usufxrex" target="_blank"><i class="fab fa-github"></i> GitHub</a>
                         </div>
                     </div>
                 </div>
@@ -542,12 +800,19 @@
             <div class="research-section">
                 <h3><i class="fas fa-users"></i> Conference Papers</h3>
                 <div class="research-item">
-                    <h4>Title of Your Conference Paper 1</h4>
-                    <p><strong>Authors:</strong> Your Name, Co-author names</p>
-                    <p><strong>Conference:</strong> Conference Name, Year</p>
+                    <h4>Scratch Vision Transformer Model for Diagnosis Grape Leaf Disease</h4>
+                    <p><strong>Authors:</strong> Yousuf Rayhan Emon, et al.</p>
+                    <p><strong>Conference:</strong> International Conference on Trends in Computational and Cognitive Engineering, 2024</p>
                     <div class="research-links">
-                        <a href="#" target="_blank"><i class="fas fa-file-pdf"></i> PDF</a>
-                        <a href="#" target="_blank"><i class="fas fa-external-link-alt"></i> DOI</a>
+                        <a href="#" target="_blank"><i class="fas fa-external-link-alt"></i> Springer</a>
+                    </div>
+                </div>
+                <div class="research-item">
+                    <h4>A Fuzzy-Based Vision Transformer Model for Tea Leaf Disease Detection</h4>
+                    <p><strong>Authors:</strong> Yousuf Rayhan Emon, et al.</p>
+                    <p><strong>Conference:</strong> International Conference on Trends in Computational and Cognitive Engineering, 2024</p>
+                    <div class="research-links">
+                        <a href="#" target="_blank"><i class="fas fa-external-link-alt"></i> Springer</a>
                     </div>
                 </div>
             </div>
@@ -556,11 +821,26 @@
             <div class="research-section">
                 <h3><i class="fas fa-book"></i> Journal Publications</h3>
                 <div class="research-item">
-                    <h4>Title of Your Journal Paper 1</h4>
-                    <p><strong>Authors:</strong> Your Name, Co-author names</p>
-                    <p><strong>Journal:</strong> Journal Name, Year</p>
+                    <h4>A Novel AI-Driven Model for Student Dropout Risk Analysis with Explainable AI Insights</h4>
+                    <p><strong>Authors:</strong> Yousuf Rayhan Emon, et al.</p>
+                    <p><strong>Journal:</strong> Computers and Education: Artificial Intelligence, 2024 (Citescore 17)</p>
                     <div class="research-links">
-                        <a href="#" target="_blank"><i class="fas fa-file-pdf"></i> PDF</a>
+                        <a href="#" target="_blank"><i class="fas fa-external-link-alt"></i> DOI</a>
+                    </div>
+                </div>
+                <div class="research-item">
+                    <h4>A Customised Vision Transformer for Accurate Detection and Classification of Java Plum Leaf Disease</h4>
+                    <p><strong>Authors:</strong> Yousuf Rayhan Emon, et al.</p>
+                    <p><strong>Journal:</strong> Smart Agricultural Technology, Vol. 8, 2024</p>
+                    <div class="research-links">
+                        <a href="#" target="_blank"><i class="fas fa-external-link-alt"></i> DOI</a>
+                    </div>
+                </div>
+                <div class="research-item">
+                    <h4>Multi-format Open-source Sweet Orange Leaf Dataset for Disease Detection, Classification, and Analysis</h4>
+                    <p><strong>Authors:</strong> Yousuf Rayhan Emon, et al.</p>
+                    <p><strong>Journal:</strong> Data in Brief, Vol. 55, 2024</p>
+                    <div class="research-links">
                         <a href="#" target="_blank"><i class="fas fa-external-link-alt"></i> DOI</a>
                     </div>
                 </div>
@@ -568,37 +848,52 @@
 
             <!-- In Progress -->
             <div class="research-section">
-                <h3><i class="fas fa-clock"></i> Research in Progress</h3>
+                <h3><i class="fas fa-clock"></i> Research Under Review</h3>
                 <div class="research-item">
-                    <h4>Title of Ongoing Research 1</h4>
-                    <p><strong>Status:</strong> Under Review / In Progress</p>
-                    <p><strong>Description:</strong> Brief description of your ongoing research work.</p>
+                    <h4>DeRefIdm: A Decentralized Refugee Identification and Management Using Smart Contracts</h4>
+                    <p><strong>Status:</strong> Under Review at IET Information Security</p>
+                    <p><strong>Description:</strong> Blockchain-based solution for secure refugee identity management system.</p>
                 </div>
-            </div>
-
-            <!-- ArXiv Papers -->
-            <div class="research-section">
-                <h3><i class="fas fa-archive"></i> ArXiv Preprints</h3>
                 <div class="research-item">
-                    <h4>Title of Your ArXiv Paper 1</h4>
-                    <p><strong>Authors:</strong> Your Name, Co-author names</p>
-                    <p><strong>ArXiv ID:</strong> arXiv:XXXX.XXXX</p>
-                    <div class="research-links">
-                        <a href="#" target="_blank"><i class="fas fa-file-pdf"></i> ArXiv</a>
-                    </div>
+                    <h4>Multi-Context CNN and ViT Ensemble for Leaf Disease Detection</h4>
+                    <p><strong>Status:</strong> Under Review at Smart Agricultural Technology</p>
+                    <p><strong>Description:</strong> Analysis of image size and batch size effects on ensemble networks.</p>
                 </div>
             </div>
 
             <!-- Datasets -->
             <div class="research-section">
-                <h3><i class="fas fa-database"></i> Datasets</h3>
+                <h3><i class="fas fa-database"></i> Open-Source Datasets</h3>
                 <div class="research-item">
-                    <h4>Dataset Name 1</h4>
-                    <p><strong>Description:</strong> Brief description of your dataset and its applications.</p>
+                    <h4>BDPapayaLeaf Dataset</h4>
+                    <p><strong>Description:</strong> Comprehensive papaya leaf dataset for disease detection, classification, and analysis.</p>
                     <div class="research-links">
-                        <a href="#" target="_blank"><i class="fas fa-download"></i> Download</a>
-                        <a href="#" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                        <a href="#" target="_blank"><i class="fas fa-download"></i> Dataset</a>
+                        <a href="https://github.com/usufxrex" target="_blank"><i class="fab fa-github"></i> GitHub</a>
                     </div>
+                </div>
+                <div class="research-item">
+                    <h4>Panam City Historical Wall Image Dataset</h4>
+                    <p><strong>Description:</strong> Multi-format dataset of historical wall images from Panam City for heritage preservation.</p>
+                    <div class="research-links">
+                        <a href="#" target="_blank"><i class="fas fa-download"></i> Dataset</a>
+                        <a href="https://github.com/usufxrex" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Book Chapters -->
+            <div class="research-section">
+                <h3><i class="fas fa-book-open"></i> Book Chapters</h3>
+                <div class="research-item">
+                    <h4>Blockchain Research Framework: A Comprehensive Investigation (Chapter 2)</h4>
+                    <p><strong>Book:</strong> Practical and Research Applications of Blockchain in Digital Security</p>
+                    <p><strong>Publisher:</strong> Muktodhara Prokashoni – DIU Press, 2024</p>
+                </div>
+                <div class="research-item">
+                    <h4>Applications of Blockchain in Refugee Identification and Management (Chapter 10)</h4>
+                    <p><strong>Book:</strong> Practical and Research Applications of Blockchain in Digital Security</p>
+                    <p><strong>Publisher:</strong> Muktodhara Prokashoni – DIU Press, 2024</p>
                 </div>
             </div>
         </div>
@@ -638,37 +933,37 @@
                     <h3><i class="fas fa-share-alt"></i> Connect with Me</h3>
                     <div class="social-grid">
                         <div class="social-item">
-                            <a href="https://linkedin.com/in/yourprofile" target="_blank">
+                            <a href="https://www.linkedin.com/in/usuf-rayhan-emon/" target="_blank">
                                 <i class="fab fa-linkedin"></i>
                                 <span>LinkedIn</span>
                             </a>
                         </div>
                         <div class="social-item">
-                            <a href="https://github.com/yourusername" target="_blank">
+                            <a href="https://github.com/usufxrex" target="_blank">
                                 <i class="fab fa-github"></i>
                                 <span>GitHub</span>
                             </a>
                         </div>
                         <div class="social-item">
-                            <a href="https://scholar.google.com/citations?user=yourID" target="_blank">
+                            <a href="https://scholar.google.com/citations?user=16_BMKUAAAAJ&hl=en&authuser=7" target="_blank">
                                 <i class="fas fa-graduation-cap"></i>
                                 <span>Scholar</span>
                             </a>
                         </div>
                         <div class="social-item">
-                            <a href="https://facebook.com/yourprofile" target="_blank">
+                            <a href="https://www.facebook.com/yousufrayhanemon" target="_blank">
                                 <i class="fab fa-facebook"></i>
                                 <span>Facebook</span>
                             </a>
                         </div>
                         <div class="social-item">
-                            <a href="https://t.me/yourusername" target="_blank">
+                            <a href="https://t.me/+8801708936687" target="_blank">
                                 <i class="fab fa-telegram"></i>
                                 <span>Telegram</span>
                             </a>
                         </div>
                         <div class="social-item">
-                            <a href="https://wa.me/yourphonenumber" target="_blank">
+                            <a href="https://wa.me/8801708936687" target="_blank">
                                 <i class="fab fa-whatsapp"></i>
                                 <span>WhatsApp</span>
                             </a>
@@ -703,11 +998,6 @@
             window.location.hash = sectionId;
         }
 
-        // Project details function (placeholder)
-        function showProjectDetails(projectId) {
-            alert('Project details coming soon! You can update this function to show detailed project information.');
-        }
-
         // Handle initial page load
         window.addEventListener('load', function() {
             const hash = window.location.hash.substring(1);
@@ -725,6 +1015,19 @@
                         behavior: 'smooth'
                     });
                 }
+            });
+        });
+
+        // Add some interactivity to the homepage cards
+        document.addEventListener('DOMContentLoaded', function() {
+            const cards = document.querySelectorAll('.main-card, .nav-card');
+            cards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-10px) scale(1.02)';
+                });
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0) scale(1)';
+                });
             });
         });
     </script>
