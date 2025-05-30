@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yousuf Rayhan Emon - AI/ML Researcher Portfolio</title>
+    <title>Yousuf Rayhan Emon</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         * {
@@ -168,6 +168,26 @@
             color: #ffd700;
             margin-bottom: 1rem;
             font-size: 1.2rem;
+        }
+
+        .updates-container {
+            max-height: 220px;
+            overflow-y: auto;
+            padding-right: 5px;
+        }
+
+        .updates-container::-webkit-scrollbar {
+            width: 4px;
+        }
+
+        .updates-container::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+
+        .updates-container::-webkit-scrollbar-thumb {
+            background: #ffd700;
+            border-radius: 4px;
         }
 
         .update-item {
@@ -574,8 +594,7 @@
     <section id="home" class="section">
         <div class="container">
             <div class="home-hero">
-                <h1>Welcome to My Portfolio</h1>
-                <p>AI/ML Researcher | Teacher | Python Programmer - Advancing healthcare and agriculture through explainable AI and deep learning innovations</p>
+                <h2 style="font-size: 1.8rem; color: #ffd700; margin-bottom: 1rem; font-weight: 600;">AI/ML Researcher | Teacher | Python Programmer</h2>
             </div>
 
             <!-- First Row - Main Cards -->
@@ -598,18 +617,26 @@
                 <!-- Latest Updates -->
                 <div class="main-card updates-card">
                     <h3><i class="fas fa-newspaper"></i> Latest Updates</h3>
-                    <div>
+                    <div class="updates-container">
                         <div class="update-item">
-                            <h4>Q1 Journal Publication</h4>
-                            <span>Dec 2024 - Citescore 17</span>
+                            <h4>Research Award from DIU 2025</h4>
+                            <span>May 2025</span>
                         </div>
                         <div class="update-item">
-                            <h4>Research Award from DIU</h4>
-                            <span>Nov 2024</span>
+                            <h4>Research Paper - Domain-aware Learning</h4>
+                            <span>In Progress</span>
                         </div>
                         <div class="update-item">
-                            <h4>Feature Fusion for Medical AI</h4>
-                            <span>Oct 2024</span>
+                            <h4>Project - Conditional GAN based Feature Fusion for Medical AI</h4>
+                            <span>March 2025</span>
+                        </div>
+                        <div class="update-item">
+                            <h4>Q1 Journal Published - Educational with XAI</h4>
+                            <span>Dec 2024</span>
+                        </div>
+                        <div class="update-item">
+                            <h4>Vision Transformer based Agricultural Disease Detection</h4>
+                            <span>Aug 2024</span>
                         </div>
                     </div>
                 </div>
@@ -657,7 +684,7 @@
                 <div class="nav-card" onclick="window.open('documents/CV_Yousuf_Rayhan_Emon.pdf', '_blank')">
                     <i class="fas fa-file-pdf"></i>
                     <h3>Download CV</h3>
-                    <p>View full resume</p>
+                    <p>View full CV</p>
                 </div>
             </div>
         </div>
@@ -728,6 +755,7 @@
         <div class="container">
             <h2 class="section-title">My Projects</h2>
             <div class="project-grid">
+
                 <!-- Project 1 -->
                 <div class="project-card">
                     <div class="project-image">
@@ -738,7 +766,7 @@
                         <p>A blockchain-based system for refugee identification and management using smart contracts. Ensures secure, transparent, and decentralized identity verification.</p>
                         <div class="project-links">
                             <a href="#" onclick="alert('Project details coming soon!')"><i class="fas fa-info-circle"></i> Details</a>
-                            <a href="https://github.com/usufxrex" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                            <a href="https://github.com/usufxrex/Refugee_Identity_Using_Smart_Contract" target="_blank"><i class="fab fa-github"></i> GitHub</a>
                         </div>
                     </div>
                 </div>
@@ -752,8 +780,8 @@
                         <h3 class="project-title">AI-Powered Student Dropout Prediction</h3>
                         <p>Machine learning model with explainable AI insights for early detection of student dropout risks. Published in high-impact journal (Citescore 17).</p>
                         <div class="project-links">
-                            <a href="#" onclick="alert('Project details coming soon!')"><i class="fas fa-info-circle"></i> Details</a>
-                            <a href="https://github.com/usufxrex" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                            <a href="#" onclick="alert('It is a collaboration work with Sumaya Mustofa. Project details coming soon!')"><i class="fas fa-info-circle"></i> Details</a>
+                            <a href="https://github.com/SumayaMustofa20/Student-Dropout-prediction-hybrid-model" target="_blank"><i class="fab fa-github"></i> GitHub</a>
                         </div>
                     </div>
                 </div>
@@ -765,10 +793,10 @@
                     </div>
                     <div class="project-content">
                         <h3 class="project-title">Smart Agricultural Disease Detection</h3>
-                        <p>Vision Transformer models for accurate leaf disease detection in various crops including papaya, java plum, and sweet orange with custom datasets.</p>
+                        <p>Vision Transformer models for accurate leaf disease detection in various crops including grape, java plum, and sweet orange with custom datasets.</p>
                         <div class="project-links">
                             <a href="#" onclick="alert('Project details coming soon!')"><i class="fas fa-info-circle"></i> Details</a>
-                            <a href="https://github.com/usufxrex" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                            <a href="https://github.com/usufxrex/grape_leaf-disease_ViT" target="_blank"><i class="fab fa-github"></i> GitHub</a>
                         </div>
                     </div>
                 </div>
@@ -783,10 +811,162 @@
                         <p>Various blockchain projects including vaccine distribution, insurance management, and secure marriage records using smart contracts.</p>
                         <div class="project-links">
                             <a href="#" onclick="alert('Project details coming soon!')"><i class="fas fa-info-circle"></i> Details</a>
-                            <a href="https://github.com/usufxrex" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                            <a href="#" onclick="alert('Project links coming soon!')"><i class="fab fa-github"></i> GitHub</a>
                         </div>
                     </div>
                 </div>
+
+                <!-- Project 5 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-file-code" style="font-size: 2rem;"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Road Damage Detection Using YOLOv10</h3>
+                        <p>This project utilizes YOLOv10s to detect and localize potholes, cracks, and other road anomalies with high speed and accuracy, making it suitable for smart city infrastructure monitoring.</p>
+                        <div class="project-links">
+                            <a href="#" onclick="alert('Project details coming soon!')"><i class="fas fa-info-circle"></i> Details</a>
+                            <a href="https://github.com/usufxrex/road_damage_YOLOv10" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-palette" style="font-size: 2rem;"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">DigitalSignatureWithQRFrontEnd</h3>
+                        <p>A React + TypeScript frontend built with Vite, designed for generating and displaying digital signatures embedded within QR codes. This project focuses on a lightweight, modular interface for secure document validation and identity verification workflows. Developed collaboratively with Anupam Abir Kolin, it includes ESLint integration and supports scalable, production-ready code architecture.</p>
+                        <div class="project-links">
+                            <a href="#" onclick="alert('Project details coming soon!')"><i class="fas fa-info-circle"></i> Details</a>
+                            <a href="https://github.com/kolinabir/DigitalSignatureWithQRFrontEnd" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 7 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-lock" style="font-size: 2rem;"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">SecureMedical_DIU</h3>
+                        <p>A blockchain-based prototype developed using Hardhat to explore secure medical data handling and smart contract deployment. Built in collaboration with Anupam Abir Kolin, the project demonstrates the integration of Ethereum smart contracts for secure, decentralized medical record management. Includes sample contracts, deployment scripts, and basic tests to simulate real-world healthcare use cases.</p>
+                        <div class="project-links">
+                            <a href="#" onclick="alert('Project details coming soon!')"><i class="fas fa-info-circle"></i> Details</a>
+                            <a href="https://github.com/kolinabir/SecureMedical_DIU" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 8 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-link" style="font-size: 2rem;"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">MarriageApp-0.02</h3>
+                        <p>A decentralized application (dApp) prototype developed using Hardhat to explore blockchain-based marriage registration and validation systems. Created in collaboration with Anupam Abir Kolin, the project features smart contract deployment and testing to simulate secure, tamper-proof documentation of marriage records on the Ethereum blockchain.</p>
+                        <div class="project-links">
+                            <a href="#" onclick="alert('Project details coming soon!')"><i class="fas fa-info-circle"></i> Details</a>
+                            <a href="https://github.com/kolinabir/MarriageApp-0.02" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 9 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-database" style="font-size: 2rem;"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Digital-Signature-Backend</h3>
+                        <p>A backend service built to handle digital signature generation and verification processes, designed to complement the frontend QR-based signature system. Developed in collaboration with Anupam Abir Kolin, this project leverages modern cryptographic techniques and API endpoints to ensure secure document authentication in a digital ecosystem.</p>
+                        <div class="project-links">
+                            <a href="#" onclick="alert('Project details coming soon!')"><i class="fas fa-info-circle"></i> Details</a>
+                            <a href="https://github.com/kolinabir/Digital-Signature-Backend" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 10 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-robot" style="font-size: 2rem;"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Demo_AI_Assistant_DIU</h3>
+                        <p>An AI-powered assistant prototype developed to showcase the integration of natural language processing in educational environments. Built for Daffodil International University (DIU), the project demonstrates how conversational AI can assist students and faculty with queries, academic support, and task automation. Features basic interaction capabilities and serves as a foundation for more advanced virtual assistant development.</p>
+                        <div class="project-links">
+                            <a href="#" onclick="alert('Project details coming soon!')"><i class="fas fa-info-circle"></i> Details</a>
+                            <a href="https://github.com/usufxrex/Demo_AI_Assistant_DIU" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 11 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-laptop-code" style="font-size: 2rem;"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Similarity Text Checker with Plotly</h3>
+                        <p>A web-based application that analyzes and visualizes text similarity using natural language processing techniques. This tool allows users to compare textual inputs and view similarity scores through interactive Plotly visualizations. Designed for educational and research purposes, it helps identify textual overlap, paraphrasing, or potential plagiarism with clear graphical feedback.</p>
+                        <div class="project-links">
+                            <a href="#" onclick="alert('Project details coming soon!')"><i class="fas fa-info-circle"></i> Details</a>
+                            <a href="https://github.com/usufxrex/silimarity_text_checker_plotly" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 12 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-file-code" style="font-size: 2rem;"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">64_Complex_CNN_Batch_32_Simple_ViT</h3>
+                        <p>An experimental deep learning project comparing the performance of a complex CNN architecture with a lightweight Vision Transformer (ViT) on image classification tasks. The models are trained with a batch size of 32, focusing on evaluating efficiency, accuracy, and training behavior. This project serves as a comparative study to explore the trade-offs between traditional convolutional networks and emerging transformer-based vision models.</p>
+                        <div class="project-links">
+                            <a href="#" onclick="alert('Project details coming soon!')"><i class="fas fa-info-circle"></i> Details</a>
+                            <a href="https://github.com/usufxrex/64_Complex_CNN_Batch_32_Simple_ViT" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 13 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-heartbeat" style="font-size: 2rem;"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">SecureMedical_DIU</h3>
+                        <p>A deep learning project leveraging a Vision Transformer (ViT) for the classification of leukemia from microscopic blood smear images. This model aims to support early and accurate leukemia diagnosis by capturing complex visual patterns in medical imagery. The project showcases the effectiveness of transformer-based architectures in medical image analysis, with potential applications in automated diagnostics and clinical decision support.</p>
+                        <div class="project-links">
+                            <a href="#" onclick="alert('Project details coming soon!')"><i class="fas fa-info-circle"></i> Details</a>
+                            <a href="https://github.com/usufxrex/Leukemia_ViT" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 14 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-code" style="font-size: 2rem;"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Deep_Hybrid_CNN_ViT</h3>
+                        <p>A hybrid deep learning architecture combining Convolutional Neural Networks (CNNs) and Vision Transformers (ViTs) to enhance image classification performance. This project explores the synergistic strengths of CNNs for local feature extraction and ViTs for global context modeling, aiming to deliver robust and accurate visual recognition across complex datasets.</p>
+                        <div class="project-links">
+                            <a href="#" onclick="alert('Project details coming soon!')"><i class="fas fa-info-circle"></i> Details</a>
+                            <a href="https://github.com/usufxrex/Both_Complex_Hybrid_CNN_VIT" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+
             </div>
         </div>
     </section>
@@ -800,19 +980,20 @@
             <div class="research-section">
                 <h3><i class="fas fa-users"></i> Conference Papers</h3>
                 <div class="research-item">
-                    <h4>Scratch Vision Transformer Model for Diagnosis Grape Leaf Disease</h4>
-                    <p><strong>Authors:</strong> Yousuf Rayhan Emon, et al.</p>
+                    <h4>A Fuzzy-Based Vision Transformer Model for Tea Leaf Disease Detection</h4>
+                    <p><strong>Authors:</strong>Faruk Ahmed, Yousuf Rayhan Emon, Md Taimur Ahad, Mehedi Hasan Munna, Sajib Bin Mamun</p>
                     <p><strong>Conference:</strong> International Conference on Trends in Computational and Cognitive Engineering, 2024</p>
                     <div class="research-links">
-                        <a href="#" target="_blank"><i class="fas fa-external-link-alt"></i> Springer</a>
+                        <a href="https://link.springer.com/chapter/10.1007/978-981-97-1923-5_18" target="_blank"><i class="fas fa-external-link-alt"></i> Springer</a>
                     </div>
                 </div>
+                
                 <div class="research-item">
-                    <h4>A Fuzzy-Based Vision Transformer Model for Tea Leaf Disease Detection</h4>
-                    <p><strong>Authors:</strong> Yousuf Rayhan Emon, et al.</p>
+                    <h4>Scratch Vision Transformer Model for Diagnosis Grape Leaf Disease</h4>
+                    <p><strong>Authors:</strong>Sajib Bin Mamun, Md Taimur Ahad, Md Monzur Morshed, Nafiull Hossain, Yousuf Rayhan Emon</p>
                     <p><strong>Conference:</strong> International Conference on Trends in Computational and Cognitive Engineering, 2024</p>
                     <div class="research-links">
-                        <a href="#" target="_blank"><i class="fas fa-external-link-alt"></i> Springer</a>
+                        <a href="https://link.springer.com/chapter/10.1007/978-981-97-1923-5_8" target="_blank"><i class="fas fa-external-link-alt"></i> Springer</a>
                     </div>
                 </div>
             </div>
@@ -822,26 +1003,44 @@
                 <h3><i class="fas fa-book"></i> Journal Publications</h3>
                 <div class="research-item">
                     <h4>A Novel AI-Driven Model for Student Dropout Risk Analysis with Explainable AI Insights</h4>
-                    <p><strong>Authors:</strong> Yousuf Rayhan Emon, et al.</p>
+                    <p><strong>Authors:</strong>Sumaya Mustofa, Yousuf Rayhan Emon, Sajib Bin Mamun, Shabnur Anonna Akhy, Md Taimur Ahad</p>
                     <p><strong>Journal:</strong> Computers and Education: Artificial Intelligence, 2024 (Citescore 17)</p>
                     <div class="research-links">
-                        <a href="#" target="_blank"><i class="fas fa-external-link-alt"></i> DOI</a>
+                        <a href="https://www.sciencedirect.com/science/article/pii/S2666920X24001553" target="_blank"><i class="fas fa-external-link-alt"></i> DOI</a>
                     </div>
                 </div>
                 <div class="research-item">
                     <h4>A Customised Vision Transformer for Accurate Detection and Classification of Java Plum Leaf Disease</h4>
-                    <p><strong>Authors:</strong> Yousuf Rayhan Emon, et al.</p>
+                    <p><strong>Authors:</strong> Auvick Chandra Bhowmik, Md Taimur Ahad, Yousuf Rayhan Emon, Faruk Ahmed, Bo Song, Yan Li</p>
                     <p><strong>Journal:</strong> Smart Agricultural Technology, Vol. 8, 2024</p>
                     <div class="research-links">
-                        <a href="#" target="_blank"><i class="fas fa-external-link-alt"></i> DOI</a>
+                        <a href="https://www.sciencedirect.com/science/article/pii/S2772375524001059" target="_blank"><i class="fas fa-external-link-alt"></i> DOI</a>
                     </div>
                 </div>
                 <div class="research-item">
                     <h4>Multi-format Open-source Sweet Orange Leaf Dataset for Disease Detection, Classification, and Analysis</h4>
-                    <p><strong>Authors:</strong> Yousuf Rayhan Emon, et al.</p>
+                    <p><strong>Authors:</strong>Yousuf Rayhan Emon, Md Taimur Ahad, Golam Rabbany</p>
                     <p><strong>Journal:</strong> Data in Brief, Vol. 55, 2024</p>
                     <div class="research-links">
-                        <a href="#" target="_blank"><i class="fas fa-external-link-alt"></i> DOI</a>
+                        <a href="https://www.sciencedirect.com/science/article/pii/S2352340924006802" target="_blank"><i class="fas fa-external-link-alt"></i> DOI</a>
+                    </div>
+                </div>
+
+                <div class="research-item">
+                    <h4>Data of history: An open-source and multiformat wall image dataset of Panam city, a historical place</h4>
+                    <p><strong>Authors:</strong>Md Taimur Ahad, Yousuf Rayhan Emon, Sumaya Mustofa</p>
+                    <p><strong>Journal:</strong> Data in Brief, Vol. 56, 2024</p>
+                    <div class="research-links">
+                        <a href="https://www.sciencedirect.com/science/article/pii/S2352340924007406" target="_blank"><i class="fas fa-external-link-alt"></i> DOI</a>
+                    </div>
+                </div>
+
+                <div class="research-item">
+                    <h4>BDPapayaLeaf: A dataset of papaya leaf for disease detection, classification, and analysis</h4>
+                    <p><strong>Authors:</strong>Sumaya Mustofa, Md Taimur Ahad, Yousuf Rayhan Emon, Arpita Sarker</p>
+                    <p><strong>Journal:</strong> Data in Brief, Vol. 57, 2024</p>
+                    <div class="research-links">
+                        <a href="https://www.sciencedirect.com/science/article/pii/S2352340924008734" target="_blank"><i class="fas fa-external-link-alt"></i> DOI</a>
                     </div>
                 </div>
             </div>
